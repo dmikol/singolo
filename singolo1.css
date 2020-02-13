@@ -81,34 +81,46 @@ ul li a:hover{
     height: 480px;
     grid-template-columns: repeat(12, 1fr);
 }
-.phones img{
+.phones div{
     align-self: center;
 }
-.phones img:nth-child(1){
+.chev-1{
     justify-self: start;
+    background: url('assets/chev-1.png');
+    width: 16px;
+    height: 27px;
 }
-.phones img:nth-child(1):hover{
+.chev-1:hover{
     cursor: pointer;
-    width: 18px;
+    background: url('assets/chev-1-hover.png');
 }
-.phones img:nth-child(4){
+.chev-2{
     justify-self: end;
+    background: url('assets/chev-2.png') no-repeat;
+    width: 16px;
+    height: 27px;
 }
-.phones img:nth-child(4):hover{
+.chev-2:hover{
     cursor: pointer;
-    width: 18px;
+    background: url('assets/chev-2-hover.png') no-repeat;
 }
-.phones img:nth-child(2){
+.phone-vert{
     grid-column-start: 2;
     grid-column-end: 5;
+    background: url('assets/iPhone-Vertical.png') no-repeat;
+    width: 240px;
+    height: 484px;
 }
-.phones img:nth-child(3){
+.phone-horiz{
     grid-column-start: 6;
     grid-column-end: 12;
+    background: url('assets/iPhone-Horizontal.png') no-repeat;
+    width: 484px;
+    height: 240px;
 }
 @media screen and (max-width: 880px) {
-    .phones img:nth-child(2), 
-    .phones img:nth-child(3){
+    .phones div:nth-child(2), 
+    .phones div:nth-child(3){
         width: 100%;
         height: auto;
     }
