@@ -4,3 +4,67 @@
     margin: 0;
     text-decoration: none;
     }
+@font-face {
+    font-family: Lato; 
+    src: url(assets/Lato-Regular.ttf);
+    font-weight: normal;
+   }
+main{
+    max-width: 1020px;
+    /*margin: 0px auto;*/
+    font-family: Lato;
+}
+header{
+    display: grid;
+    grid-template-columns: 140px auto;
+    padding: 29px 40px 30px 41px;
+    background-color: #2d303a;
+    color: white;
+}
+ul{
+    text-transform: uppercase;
+    float: right;
+}
+.first{
+   color: #f06c64;
+}
+li:first-child:before{
+    content: "";
+}
+ul li{
+    display: inline-block;
+    margin: 0px 13px;
+    font-size: 12px;
+    padding-top: 13px;
+    position: relative;
+}
+li:before {
+    color: #494e62;
+    content: "."; 
+    top: 5px;
+    left: -15px;
+    font-size: 16px;
+    position: absolute;
+   }
+ul li:last-child {
+    margin-right: 0px;
+   }
+ul li a{
+    color: white;
+}
+ul li a:hover{
+    color: #f06c64;
+    cursor: pointer;
+}
+.logo span{
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+.logo span:last-child{
+    color: #f06c64;
+}
+.line-header{
+    height: 6px;
+    background-color: #323746;
+}
