@@ -68,3 +68,48 @@ ul li a:hover{
     height: 6px;
     background-color: #323746;
 }
+.line-slider{
+    height: 6px;
+    background-color: #ea676b;
+}
+.slider{
+    background-color: #f06c64;
+    padding: 53px 40px 61px 40px;
+}
+.phones{
+    display: grid;
+    height: 480px;
+    grid-template-columns: repeat(12, 1fr);
+}
+.phones img{
+    align-self: center;
+}
+.phones img:nth-child(1){
+    justify-self: start;
+}
+.phones img:nth-child(1):hover{
+    cursor: pointer;
+    width: 18px;
+}
+.phones img:nth-child(4){
+    justify-self: end;
+}
+.phones img:nth-child(4):hover{
+    cursor: pointer;
+    width: 18px;
+}
+.phones img:nth-child(2){
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+.phones img:nth-child(3){
+    grid-column-start: 6;
+    grid-column-end: 12;
+}
+@media screen and (max-width: 880px) {
+    .phones img:nth-child(2), 
+    .phones img:nth-child(3){
+        width: 100%;
+        height: auto;
+    }
+}
