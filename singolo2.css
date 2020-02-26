@@ -1,0 +1,27 @@
+*{
+    outline: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    }
+@font-face {
+    font-family: Lato; 
+    src: url(assets/Lato-Regular.ttf);
+    font-weight: normal;
+   }
+@font-face {
+    font-family: Lato-Black; 
+    src: url(assets/Lato-Black.ttf);
+    font-weight: bold;
+   }
+@font-face {
+    font-family: Lato-Light; 
+    src: url(assets/Lato-Light.ttf);
+    font-weight: lighter;
+   }
+main{
+    max-width: 1020px;
+    margin: 0px auto;
+    font-family: Lato;
+}
+
