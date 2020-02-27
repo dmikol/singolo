@@ -129,3 +129,45 @@ form{
 .info ul li:nth-child(3){
     background: url('assets/mail.png') -1px no-repeat;
 }
+
+/***********************FOOTER***********************/
+
+footer{
+    padding: 22px 35px 20px 42px;
+    background-color: #2d303a;
+    color: #666d89;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 140px auto;
+}
+footer p{
+    margin-top: 8px;
+}
+footer ul{
+    list-style-type: none;
+    justify-self: end;
+}
+footer ul li:nth-child(1){
+    background: url('assets/facebook.png') 50% 50% no-repeat;
+}
+footer ul li:nth-child(2){
+    background: url('assets/google+.png') 50% 50% no-repeat;
+}
+footer ul li:nth-child(3){
+    background: url('assets/twitter.png') 50% 50% no-repeat;
+}
+footer ul li:nth-child(4){
+    background: url('assets/linkedin.png') 50% 50% no-repeat;
+}
+footer ul li{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #69708b;
+    margin-right: 5px;
+}
+footer ul li:hover{
+    cursor: pointer;
+    border: 1px solid white;
+}
