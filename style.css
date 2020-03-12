@@ -94,9 +94,8 @@ h1{
     border-bottom: 6px solid #ea676b;
 }
 .phones{
-    display: grid;
+    display: flex;
     height: 480px;
-    grid-template-columns: repeat(12, 1fr);
 }
 .phones div{
     align-self: center;
@@ -116,24 +115,23 @@ h1{
     background: url('assets/chev-2.png') no-repeat;
     width: 16px;
     height: 27px;
+    margin-left: 55px;
 }
 .chev-2:hover{
     cursor: pointer;
     background: url('assets/chev-2-hover.png') no-repeat;
 }
 .phone-vert{
-    grid-column-start: 2;
-    grid-column-end: 5;
+    margin-left: 56px;
     background: url('assets/iPhone-Vertical.png') no-repeat;
     width: 240px;
     height: 484px;
 }
 .phone-horiz{
-    grid-column-start: 6;
-    grid-column-end: 12;
     background: url('assets/iPhone-Horizontal.png') no-repeat;
     width: 484px;
     height: 240px;
+    margin-left: 73px;
 }
 @media screen and (max-width: 880px) {
     .phone-vert, .phone-horiz{
@@ -176,6 +174,9 @@ h2{
 h3{
     font-size: 18px;
     font-family: Lato-Black;
+}
+.points{
+    overflow: hidden;
 }
 .points p{
     font-size: 12px;
@@ -329,7 +330,9 @@ h3{
 .portfolio-img-all :nth-child(12){
     background: url('assets/portfolio-img-12.png') no-repeat;
 }
-
+.portfolio-img-all :nth-child(n+13){
+    display: none;
+}
 /****************ABOUT US********************/
 
 .about-us{
@@ -364,12 +367,15 @@ h3{
     text-align: left;
     margin-bottom: 11px;
     font-family: Lato-Black;
+    white-space: nowrap;
+}
+.portfolio-photo{
+    overflow: hidden;
 }
 .portfolio-photo p{
     font-size: 12px;
     line-height: 22px;
     color: #767e9e; 
-    text-align: left;
     font-family: Lato;
 }
 .portfolio-photo ul{
