@@ -122,16 +122,24 @@ h1{
     background: url('assets/chev-2-hover.png') no-repeat;
 }
 .phone-vert{
-    margin-left: 56px;
-    background: url('assets/iPhone-Vertical.png') no-repeat;
     width: 240px;
-    height: 484px;
+    height: 483px;
+    margin-left: 56px;
+    background: url('assets/iPhone-Vertical-sprite.png') no-repeat;
 }
 .phone-horiz{
-    background: url('assets/iPhone-Horizontal.png') no-repeat;
     width: 484px;
     height: 240px;
-    margin-left: 73px;
+    margin-left: 74px;
+    background: url('assets/iPhone-Horizontal-sprite.png') no-repeat;
+} 
+.blue-phones{
+    position: absolute;
+    display: none;
+    left: 321px;
+    width: 797px;
+   
+    background: url('assets/blue-phone.jpg') no-repeat;
 }
 @media screen and (max-width: 880px) {
     .phone-vert, .phone-horiz{
