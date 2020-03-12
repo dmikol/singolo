@@ -39,7 +39,7 @@ header ul{
     text-transform: uppercase;
     float: right;
 }
-.first{
+.active{
    color: #f06c64;
 }
 header li:first-child:before{

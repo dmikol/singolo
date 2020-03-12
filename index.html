@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    
     <title>Singolo</title>
 </head>
 <body>
-    <main>
+    <main id="home">
         <header>
             <section class="logo">
                 <h1>Singolo</h1>
                 <span>*</span>
             </section>
             <nav>
-                <ul>
-                    <li><a class="first" href="#">home</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>
+                <ul id="menu-header">
+                    <li><a href="#home" class="active">home</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -35,7 +36,7 @@
         <section class="our-services">
             <div class="services">
                 <div class="description">
-                    <h2>Our Services</h2>
+                    <h2  id="services">Our Services</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor 
                         mauris condimentum. Duis mollis, non commodo luctus, 
                         nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
@@ -82,7 +83,7 @@
             </div>
         </section>
         <section class="portfolio">
-                <h2>Portfolio</h2>
+                <h2 id="portfolio">Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat 
                     porttitor ligula, eget lacinia odio sem nec elit.</p>
                         <ul>
@@ -107,7 +108,7 @@
                     </div>
             </section>
             <section class="about-us">
-                    <h2>About Us</h2>
+                    <h2  id="about">About Us</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                         Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
                         lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
@@ -167,7 +168,7 @@
                                   <input class="submit" type="submit" value="Submit">
                                </form>
                                <div class="info">
-                                   <h3>Contact Information</h3>
+                                   <h3 id="contact">Contact Information</h3>
                                    <p>
                                         Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra 
                                         nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
@@ -193,5 +194,6 @@
                         </ul>
                     </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
