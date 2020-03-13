@@ -6,6 +6,8 @@ const IPHONE_VERT = document.getElementById('iphone-vertical');
 const IPHONE_HORIZ = document.getElementById('iphone-horizontal');
 const MENU_PORTFOLIO = document.getElementById('menu-portfolio');
 const PORTFOLIO_IMG = document.getElementById('portfolio-img');
+const BUTTON = document.getElementById('btn');
+const CLOSE_BUTTON = document.getElementById('close-btn');
 
 let count = 0;
 let count_iphone_vert = 0;
@@ -73,3 +75,17 @@ IPHONE_HORIZ.addEventListener('click', (event) => {
             count_iphone_horiz = 0;
         }
     });
+BUTTON.addEventListener('click', () => {
+    const subject = document.getElementById('subject').value.toString();
+    const description = document.getElementById('description').value.toString();
+    subject != '' ? document.getElementById('tema').innerText = 'Тема: ' + subject :
+    document.getElementById('tema').innerText = 'Без темы';
+    description != '' ? document.getElementById('desc').innerText = 'Описание: ' + description :
+    document.getElementById('desc').innerText = 'Без описания';
+    document.getElementById('message-block').classList.remove('hidden');
+});
+CLOSE_BUTTON.addEventListener('click', () => {
+    document.getElementById('tema').innerText = '';
+    document.getElementById('desc').innerText = '';
+    document.getElementById('message-block').classList.add('hidden');
+});

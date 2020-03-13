@@ -158,18 +158,26 @@
                 </section>
                 <section class="get-a-quote">
                         <h2>Get a Quote</h2>
-                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+                        <p class="get-a-quote-p">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
                             Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget 
                             lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, 
                             tortor mauris condimentum nibh.</p>
                             <div class="form-and-info">
-                               <form name="question" method="post">
+                               <div class="form">
                                   <input type="text" placeholder="Name (Required)" size="40" required><br>
                                   <input type="email" placeholder="Email (Required)" required><br>
-                                  <input type="text" placeholder="Subject"><br>
-                                  <textarea name="comment" cols="40" rows="15" placeholder="Describe your project in detail..."></textarea><br>
-                                  <input class="submit" type="submit" value="Submit">
-                               </form>
+                                  <input type="text" id="subject" placeholder="Subject"><br>
+                                  <textarea name="comment" cols="40" rows="15" id="description" placeholder="Describe your project in detail..."></textarea><br>
+                                  <button class="submit" id="btn">Submit</button>
+                                  <div id="message-block" class="hidden">
+                                      <div id="message">
+                                          <p>Письмо отправлено!</p>
+                                          <p><span id="tema"></span></p>
+                                          <p><span id="desc"></span></p>
+                                          <button id="close-btn">OK</button>
+                                      </div>
+                                  </div>
+                               </div>
                                <div class="info">
                                    <h3 id="contact">Contact Information</h3>
                                    <p>
