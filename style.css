@@ -39,7 +39,7 @@ header ul{
     text-transform: uppercase;
     float: right;
 }
-.active{
+header .active{
    color: #f06c64;
 }
 header li:first-child:before{
@@ -284,7 +284,7 @@ h3{
    color: #767e9e;;
    font-size: 12px;
 }
-.first-portfolio{
+.portfolio .active{
     color: #dedede !important;
     border:1px solid #dedede !important;
 }
@@ -299,7 +299,7 @@ h3{
     grid-gap: 20px;
     margin-top: 20px;
 }
-.portfolio-img{
+.portfolio-img-all div{
     height: 187px;
 }
 .portfolio-img-all :nth-child(1){
@@ -340,6 +340,12 @@ h3{
 }
 .portfolio-img-all :nth-child(n+13){
     display: none;
+}
+.border-img{
+    border: 5px solid #F06C64;
+    height: 177px !important;
+    width: 210px;
+    background-position: -5px !important;
 }
 /****************ABOUT US********************/
 

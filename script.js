@@ -4,15 +4,38 @@ const CHEV1 = document.getElementById('chev-click1');
 const CHEV2 = document.getElementById('chev-click2');
 const IPHONE_VERT = document.getElementById('iphone-vertical');
 const IPHONE_HORIZ = document.getElementById('iphone-horizontal');
+const MENU_PORTFOLIO = document.getElementById('menu-portfolio');
+const PORTFOLIO_IMG = document.getElementById('portfolio-img');
 
 let count = 0;
 let count_iphone_vert = 0;
 let count_iphone_horiz = 0;
 
 MENU_HEADER.addEventListener('click', (event) => {
-MENU_HEADER.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-event.target.classList.add('active');
-});
+    MENU_HEADER.querySelectorAll('a').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+    });
+
+    let arrImg = [];
+    for(let i = 1; i < 13; i++){
+        arrImg.push("url('assets/portfolio-img-"+i+".png')");
+    }
+
+MENU_PORTFOLIO.addEventListener('click', (event) => {
+    MENU_PORTFOLIO.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+    arrImg.unshift(arrImg[arrImg.length-1]);
+    arrImg.pop();
+    PORTFOLIO_IMG.querySelectorAll('div').forEach((el, index) => {
+        el.style.background = arrImg[index];
+    });
+    event.preventDefault();
+    });
+
+PORTFOLIO_IMG.addEventListener('click', (event) => {
+    PORTFOLIO_IMG.querySelectorAll('div').forEach(el => el.classList.remove('border-img'));
+    event.target.classList.add('border-img');
+    });
 
 CHEV1.addEventListener('click', (event) => {
     if(count == 0){
