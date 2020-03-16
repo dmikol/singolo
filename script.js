@@ -1,5 +1,6 @@
 const MENU_HEADER = document.getElementById('menu-header');
 const CLIDER_PHONES = document.getElementById('blue-phones');
+const SLIDER = document.getElementById('slider');
 const CHEV1 = document.getElementById('chev-click1');
 const CHEV2 = document.getElementById('chev-click2');
 const IPHONE_VERT = document.getElementById('iphone-vertical');
@@ -42,18 +43,26 @@ PORTFOLIO_IMG.addEventListener('click', (event) => {
 CHEV1.addEventListener('click', (event) => {
     if(count == 0){
         CLIDER_PHONES.style.display = "block";
+        SLIDER.style.background = "#86aff1";
+        SLIDER.style.borderBottom = "6px solid #86aff1";
         count = 1;
     }else{
         CLIDER_PHONES.style.display = "none";
+        SLIDER.style.background = "#f06c64";
+        SLIDER.style.borderBottom = "6px solid #ea676b";
         count = 0;
     }
     });
 CHEV2.addEventListener('click', (event) => {
     if(count == 0){
         CLIDER_PHONES.style.display = "block";
+        SLIDER.style.background = "#86aff1";
+        SLIDER.style.borderBottom = "6px solid #86aff1";
         count = 1;
     }else{
         CLIDER_PHONES.style.display = "none";
+        SLIDER.style.background = "#f06c64";
+        SLIDER.style.borderBottom = "6px solid #ea676b";
         count = 0;
     }
     });
