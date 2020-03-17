@@ -163,12 +163,12 @@
                             lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, 
                             tortor mauris condimentum nibh.</p>
                             <div class="form-and-info">
-                               <div class="form">
+                               <form class="form" id=form>
                                   <input type="text" placeholder="Name (Required)" size="40" required><br>
                                   <input type="email" placeholder="Email (Required)" required><br>
                                   <input type="text" id="subject" placeholder="Subject"><br>
                                   <textarea name="comment" cols="40" rows="15" id="description" placeholder="Describe your project in detail..."></textarea><br>
-                                  <button class="submit" id="btn">Send</button>
+                                  <button type="submit" class="submit">Send</button>
                                   <div id="message-block" class="hidden">
                                       <div id="message">
                                           <p>Письмо отправлено!</p>
@@ -177,7 +177,7 @@
                                           <button id="close-btn">OK</button>
                                       </div>
                                   </div>
-                               </div>
+                               </form>
                                <div class="info">
                                    <h3 id="contact">Contact Information</h3>
                                    <p>
