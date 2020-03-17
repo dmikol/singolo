@@ -68,19 +68,23 @@ CHEV2.addEventListener('click', (event) => {
     });
 IPHONE_VERT.addEventListener('click', (event) => {
     if(count_iphone_vert == 0){
-        IPHONE_VERT.style.backgroundPositionX = "-240px";
+        IPHONE_VERT.classList.remove('phone-vert');
+        event.target.classList.add('phone-vert-off');
         count_iphone_vert = 1;
     }else{
-        IPHONE_VERT.style.backgroundPositionX = "0px";
+        IPHONE_VERT.classList.remove('phone-vert-off');
+        event.target.classList.add('phone-vert');
         count_iphone_vert = 0;
     }
     });
 IPHONE_HORIZ.addEventListener('click', (event) => {
         if(count_iphone_horiz == 0){
-            IPHONE_HORIZ.style.backgroundPositionY = "-240px";
+            IPHONE_HORIZ.classList.remove('phone-horiz');
+            event.target.classList.add('phone-horiz-off');
             count_iphone_horiz = 1;
         }else{
-            IPHONE_HORIZ.style.backgroundPositionY = "0px";
+            IPHONE_HORIZ.classList.remove('phone-horiz-off');
+            event.target.classList.add('phone-horiz');
             count_iphone_horiz = 0;
         }
     });
