@@ -1,5 +1,5 @@
 const MENU_HEADER = document.getElementById('menu-header');
-const CLIDER_PHONES = document.getElementById('blue-phones');
+const SLIDER_PHONES = document.getElementById('blue-phones');
 const SLIDER = document.getElementById('slider');
 const CHEV1 = document.getElementById('chev-click1');
 const CHEV2 = document.getElementById('chev-click2');
@@ -9,6 +9,12 @@ const MENU_PORTFOLIO = document.getElementById('menu-portfolio');
 const PORTFOLIO_IMG = document.getElementById('portfolio-img');
 const CLOSE_BUTTON = document.getElementById('close-btn');
 const FORM = document.getElementById('form');
+const RESP_MENU_VISIB = document.getElementById('resp-menu-visible');
+const RESP_MENU_HIDDEN = document.getElementById('resp-menu-hidden');
+const MENU_HEADER_HIDDEN = document.getElementById('menu-header-hidden');
+const MENU_ABSOLUTE = document.getElementById('menu-absolute');
+
+
 let count = 0;
 let count_iphone_vert = 0;
 let count_iphone_horiz = 0;
@@ -41,28 +47,41 @@ PORTFOLIO_IMG.addEventListener('click', (event) => {
 
 CHEV1.addEventListener('click', (event) => {
     if(count == 0){
-        CLIDER_PHONES.style.display = "block";
-        SLIDER.style.background = "#86aff1";
-        SLIDER.style.borderBottom = "6px solid #86aff1";
+        SLIDER.style.background = "#648BF0";
+        SLIDER_PHONES.style.transition = "2s";
+        SLIDER_PHONES.style.opacity = "1";
+        SLIDER_PHONES.style.zIndex = "10";
+        SLIDER.style.transition = "1s";
+        SLIDER.classList.add('blue');
         count = 1;
     }else{
-        CLIDER_PHONES.style.display = "none";
+        SLIDER_PHONES.style.transition = "1s";
+        SLIDER_PHONES.style.opacity = "0";
+        SLIDER_PHONES.style.zIndex = "-1";
+        SLIDER.style.transition = "2s";
         SLIDER.style.background = "#f06c64";
-        SLIDER.style.borderBottom = "6px solid #ea676b";
         count = 0;
+        SLIDER.classList.remove('blue');
     }
     });
 CHEV2.addEventListener('click', (event) => {
     if(count == 0){
-        CLIDER_PHONES.style.display = "block";
-        SLIDER.style.background = "#86aff1";
-        SLIDER.style.borderBottom = "6px solid #86aff1";
+        SLIDER.style.background = "#648BF0";
+        SLIDER_PHONES.style.transition = "2s";
+        SLIDER_PHONES.style.opacity = "1";
+        SLIDER_PHONES.style.zIndex = "10";
+        SLIDER.style.transition = "1s";
+        SLIDER.classList.add('blue');
+
         count = 1;
     }else{
-        CLIDER_PHONES.style.display = "none";
+        SLIDER_PHONES.style.transition = "1s";
+        SLIDER_PHONES.style.opacity = "0";
+        SLIDER_PHONES.style.zIndex = "-1";
+        SLIDER.style.transition = "2s";
         SLIDER.style.background = "#f06c64";
-        SLIDER.style.borderBottom = "6px solid #ea676b";
         count = 0;
+        SLIDER.classList.remove('blue');
     }
     });
 IPHONE_VERT.addEventListener('click', (event) => {
@@ -101,3 +120,44 @@ CLOSE_BUTTON.addEventListener('click', () => {
     document.getElementById('message-block').classList.add('hidden');
     FORM.reset();
 });
+RESP_MENU_VISIB.addEventListener('click', (event) => {
+    MENU_ABSOLUTE.style.display = "block";
+    });
+RESP_MENU_HIDDEN.addEventListener('click', (event) => {
+    MENU_ABSOLUTE.style.display = "none";
+    });
+MENU_HEADER_HIDDEN.addEventListener('click', (event) => {
+    MENU_HEADER_HIDDEN.querySelectorAll('a').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+    MENU_ABSOLUTE.style.display = "none";
+    });
+   
+document.addEventListener('scroll', onScroll);
+function onScroll(event){
+
+    if(window.scrollY > 95){
+        document.querySelector('header').classList.add('small');
+    }
+
+    const SECTIONS = document.querySelectorAll('section');
+    const CUR_POS = window.scrollY;
+    console.log(CUR_POS);
+    if(CUR_POS < 695){
+        MENU_HEADER.querySelectorAll('a')[0].style.color = "#f06c64";
+    }else{
+        MENU_HEADER.querySelectorAll('a')[0].style.color = "white";
+    }
+
+    SECTIONS.forEach((el) => {
+        if(el.offsetTop <= CUR_POS && (el.offsetTop + el.offsetHeight) > CUR_POS){
+            MENU_HEADER.querySelectorAll('a').forEach((a) => {
+                a.classList.remove('active');
+                if(el.getAttribute('id') === a.getAttribute('href').substring(1)){
+                    a.classList.add('active');
+                }
+            })
+        }
+    })
+};
+
+

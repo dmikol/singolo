@@ -9,15 +9,40 @@
     <title>Singolo</title>
 </head>
 <body>
-    <main id="home">
+    <main>
         <header>
+            <div class="responsive-menu-visible" id="resp-menu-visible">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="hidden-menu-absolute" id="menu-absolute">
+                <div class="responsive-menu-hidden" id="resp-menu-hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+                <section class="logo-hidden">
+                <h1>Singolo</h1>
+                <span>*</span>
+                </section>
+                <nav>
+                    <ul id="menu-header-hidden">
+                        <li><a href="#slider" class="active">home</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
             <section class="logo">
                 <h1>Singolo</h1>
                 <span>*</span>
             </section>
             <nav>
                 <ul id="menu-header">
-                    <li><a href="#home" class="active">home</a></li>
+                    <li><a href="#slider" class="active">home</a></li>
                     <li><a href="#services">services</a></li>
                     <li><a href="#portfolio">portfolio</a></li>
                     <li><a href="#about">about</a></li>
@@ -25,8 +50,9 @@
                 </ul>
             </nav>
         </header>
+        <div>
         <section class="slider" id="slider">
-            <div class="phones">
+            <section class="phones">
                     <div class="chev-1" id="chev-click1"></div>
                     <div class="blue-phones" id="blue-phones">
                         <img src='assets/blue-phone.jpg' alt="blue-phone">
@@ -34,12 +60,12 @@
                     <div class="phone-vert" id="iphone-vertical"></div>
                     <div class="phone-horiz" id="iphone-horizontal"></div>
                     <div class="chev-2" id="chev-click2"></div>
-            </div>
+            </section>
         </section>
-        <section class="our-services">
+        <section class="our-services"  id="services">
             <div class="services">
                 <div class="description">
-                    <h2 id="services">Our Services</h2>
+                    <h2>Our Services</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor 
                         mauris condimentum. Duis mollis, non commodo luctus, 
                         nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
@@ -85,8 +111,8 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
-                <h2 id="portfolio">Portfolio</h2>
+        <section class="portfolio"  id="portfolio">
+                <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat 
                     porttitor ligula, eget lacinia odio sem nec elit.</p>
                         <ul id="menu-portfolio">
@@ -110,8 +136,8 @@
                         <div></div>
                     </div>
             </section>
-            <section class="about-us">
-                    <h2 id="about">About Us</h2>
+            <section class="about-us"  id="about">
+                    <h2>About Us</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                         Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
                         lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
@@ -156,14 +182,14 @@
                             </div>
                     </div>
                 </section>
-                <section class="get-a-quote">
+                <section class="get-a-quote"  id="contact">
                         <h2>Get a Quote</h2>
                         <p class="get-a-quote-p">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
                             Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget 
                             lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, 
                             tortor mauris condimentum nibh.</p>
                             <div class="form-and-info">
-                               <form class="form" id=form>
+                               <form class="form" id="form">
                                   <input type="text" placeholder="Name (Required)" size="40" required><br>
                                   <input type="email" placeholder="Email (Required)" required><br>
                                   <input type="text" id="subject" placeholder="Subject"><br>
@@ -179,9 +205,9 @@
                                   </div>
                                </form>
                                <div class="info">
-                                   <h3 id="contact">Contact Information</h3>
+                                   <h3>Contact Information</h3>
                                    <p>
-                                        Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra 
+                                        Quisque hendrerit purus dapibus, ornare nibh vitae, viverra 
                                         nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
                                         Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, 
                                         et consequat felis. 
