@@ -1,5 +1,5 @@
 const MENU_HEADER = document.getElementById('menu-header');
-const SLIDER_PHONES = document.getElementById('blue-phones');
+const SLIDER_PHONES = document.getElementById('block-phones');
 const SLIDER = document.getElementById('slider');
 const CHEV1 = document.getElementById('chev-click1');
 const CHEV2 = document.getElementById('chev-click2');
@@ -48,61 +48,62 @@ PORTFOLIO_IMG.addEventListener('click', (event) => {
 CHEV1.addEventListener('click', (event) => {
     if(count == 0){
         SLIDER.style.background = "#648BF0";
-        SLIDER_PHONES.style.transition = "2s";
-        SLIDER_PHONES.style.opacity = "1";
-        SLIDER_PHONES.style.zIndex = "10";
-        SLIDER.style.transition = "1s";
-        SLIDER.classList.add('blue');
+        SLIDER.style.borderBottom = "6px solid #648BF0";
+        SLIDER.style.transition = "2s";
+        SLIDER_PHONES.innerHTML = `<img src='assets/blue-phone.png' alt="vert-phone">`;
+        SLIDER_PHONES.classList.add('blue');
         count = 1;
     }else{
-        SLIDER_PHONES.style.transition = "1s";
-        SLIDER_PHONES.style.opacity = "0";
-        SLIDER_PHONES.style.zIndex = "-1";
-        SLIDER.style.transition = "2s";
         SLIDER.style.background = "#f06c64";
+        SLIDER.style.borderBottom = "6px solid #f06c64";
+        SLIDER.style.transition = "2s";
         count = 0;
-        SLIDER.classList.remove('blue');
+        SLIDER_PHONES.classList.remove('blue');
+        SLIDER_PHONES.innerHTML = `<div class="phone-vert" id="iphone-vertical">
+        <img src='assets/iPhone-Vertical.png' alt="vert-phone">
+    </div>
+    <div class="phone-horiz" id="iphone-horizontal">
+        <img src='assets/iPhone-Horizontal.png' alt="horiz-phone">
+    </div>`
     }
     });
 CHEV2.addEventListener('click', (event) => {
     if(count == 0){
         SLIDER.style.background = "#648BF0";
-        SLIDER_PHONES.style.transition = "2s";
-        SLIDER_PHONES.style.opacity = "1";
-        SLIDER_PHONES.style.zIndex = "10";
-        SLIDER.style.transition = "1s";
-        SLIDER.classList.add('blue');
-
+        SLIDER.style.borderBottom = "6px solid #648BF0";
+        SLIDER.style.transition = "2s";
+        SLIDER_PHONES.innerHTML = `<img src='assets/blue-phone.png' alt="vert-phone">`;
+        SLIDER_PHONES.classList.add('blue');
         count = 1;
     }else{
-        SLIDER_PHONES.style.transition = "1s";
-        SLIDER_PHONES.style.opacity = "0";
-        SLIDER_PHONES.style.zIndex = "-1";
-        SLIDER.style.transition = "2s";
         SLIDER.style.background = "#f06c64";
+        SLIDER.style.borderBottom = "6px solid #f06c64";
+        SLIDER.style.transition = "2s";
         count = 0;
-        SLIDER.classList.remove('blue');
+        SLIDER_PHONES.classList.remove('blue');
+        SLIDER_PHONES.innerHTML = `<div class="phone-vert" id="iphone-vertical">
+        <img src='assets/iPhone-Vertical.png' alt="vert-phone">
+    </div>
+    <div class="phone-horiz" id="iphone-horizontal">
+        <img src='assets/iPhone-Horizontal.png' alt="horiz-phone">
+    </div>`
     }
     });
 IPHONE_VERT.addEventListener('click', (event) => {
     if(count_iphone_vert == 0){
-        IPHONE_VERT.classList.remove('phone-vert');
-        event.target.classList.add('phone-vert-off');
+        IPHONE_VERT.innerHTML = `<img src='assets/iPhone-Vertical-off.png' alt="vert-phone">`;
         count_iphone_vert = 1;
     }else{
-        IPHONE_VERT.classList.remove('phone-vert-off');
-        event.target.classList.add('phone-vert');
+        IPHONE_VERT.innerHTML = `<img src='assets/iPhone-Vertical.png' alt="vert-phone">`;
         count_iphone_vert = 0;
     }
     });
 IPHONE_HORIZ.addEventListener('click', (event) => {
         if(count_iphone_horiz == 0){
-            IPHONE_HORIZ.classList.remove('phone-horiz');
-            event.target.classList.add('phone-horiz-off');
+            IPHONE_HORIZ.innerHTML = `<img src='assets/iPhone-Horizontal-off.png' alt="vert-phone">`;
             count_iphone_horiz = 1;
         }else{
-            IPHONE_HORIZ.classList.remove('phone-horiz-off');
-            event.target.classList.add('phone-horiz');
+            IPHONE_HORIZ.innerHTML = `<img src='assets/iPhone-Horizontal.png' alt="vert-phone">`;
             count_iphone_horiz = 0;
         }
     });
@@ -135,13 +136,12 @@ MENU_HEADER_HIDDEN.addEventListener('click', (event) => {
 document.addEventListener('scroll', onScroll);
 function onScroll(event){
 
-    if(window.scrollY > 95){
-        document.querySelector('header').classList.add('small');
-    }
+    // if(window.scrollY > 95){
+    //     document.querySelector('header').classList.add('small');
+    // }
 
     const SECTIONS = document.querySelectorAll('section');
     const CUR_POS = window.scrollY;
-    console.log(CUR_POS);
     if(CUR_POS < 695){
         MENU_HEADER.querySelectorAll('a')[0].style.color = "#f06c64";
     }else{
