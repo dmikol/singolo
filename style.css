@@ -137,12 +137,6 @@ h1{
     cursor: pointer;
     background: url('assets/chev-2-hover.png') no-repeat;
 }
-.phone-vert-off{
-    width: 240px;
-    height: 483px;
-    margin-left: 56px;
-    background: url('assets/iPhone-Vertical-sprite.png') -240px;
-}
 .block-phones{
     display: flex;
     width: 100%;
@@ -154,7 +148,13 @@ h1{
 }
 .phone-horiz{
     margin-left: 74px;
+    background: url('assets/iPhone-Horizontal.png') no-repeat;
+    background-size: 100%;
 } 
+.phone-vert{
+    background: url('assets/iPhone-Vertical.png') no-repeat;
+    background-size: 100%;
+}
 .phone-horiz img{
     width: 100%;
     height: auto;
@@ -162,12 +162,6 @@ h1{
 .phone-vert img{
     width: 100%;
     height: auto;
-}
-.phone-horiz-off{
-    width: 484px;
-    height: 240px;
-    margin-left: 74px;
-    background: url('assets/iPhone-Horizontal-sprite.png') 0px -240px;
 }
 
 /*****************************SERVICES***********************/
